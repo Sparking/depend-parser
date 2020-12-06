@@ -5,8 +5,10 @@
 #include "rbtree.h"
 
 struct depend_chain_vertex_s {
-    struct rb_node serial_rb;
+    unsigned left_count;
+    unsigned total_count;
     struct rb_root depend_root;
+    struct rb_node serial_rb;
     char name[0];
 };
 

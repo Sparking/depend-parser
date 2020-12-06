@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "depend-parser.h"
 
+void depend_chain_trave(struct depend_chain_s *chain);
 int main(void)
 {
     int ret;
@@ -27,6 +28,7 @@ int main(void)
         return -1;
     }
 
+    depend_chain_trave(&chain);
     depend_chain_clean(&chain);
 
     return 0;
